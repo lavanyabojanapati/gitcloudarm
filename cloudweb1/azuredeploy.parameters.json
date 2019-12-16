@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus"
+    },
+    "networkInterfaceName": {
+      "value": "vmdeploytwosite548"
+    },
+    "networkSecurityGroupName": {
+      "value": "VMdeploytwosite-nsg"
+    },
+    "networkSecurityGroupRules": {
+      "value": [
+        {
+          "name": "RDP",
+          "properties": {
+            "priority": 300,
+            "protocol": "TCP",
+            "access": "Allow",
+            "direction": "Inbound",
+            "sourceAddressPrefix": "*",
+            "sourcePortRange": "*",
+            "destinationAddressPrefix": "*",
+            "destinationPortRange": "3389"
+          }
+        }
+      ]
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "virtualNetworkId": {
+      "value": "/subscriptions/8619a6cb-3910-48bf-b5e6-8f2a88ce845e/resourceGroups/Azureresourcegrptest/providers/Microsoft.Network/virtualNetworks/Azureresourcegrptestvnet252"
+    },
+    "publicIpAddressName": {
+      "value": "VMdeploytwosite-ip"
+    },
+    "publicIpAddressType": {
+      "value": "Dynamic"
+    },
+    "publicIpAddressSku": {
+      "value": "Basic"
+    },
+    "virtualMachineName": {
+      "value": "VMdeploytwosite"
+    },
+    "virtualMachineRG": {
+      "value": "Azureresourcegrptest"
+    },
+    "osDiskType": {
+      "value": "StandardSSD_LRS"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "adminUsername": {
+      "value": "LavanyaVM"
+    },
+    "adminPassword": {
+      "value": null
+    }
+  }
+}
